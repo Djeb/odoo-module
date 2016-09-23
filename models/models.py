@@ -4,6 +4,8 @@ from openerp import models, fields, api
 
 class Applications(models.Model):
     _name = 'lists.applications'
+# class lists(models.Model):
+#     _name = 'lists.lists'
 
 #     name = fields.Char()
 #     value = fields.Integer()
