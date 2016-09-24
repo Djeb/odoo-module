@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from openerp import models, fields, api
+from datetime import datetime
+from openerp.tools import DEFAULT_SERVER_DATE_FORMAT
 
 class Application(models.Model):
     _name = 'lists.application'
@@ -12,6 +14,12 @@ class Application(models.Model):
     state = fields.Selection([('open', 'Open'), 
     	('needs offer', 'Needs Offer'), ('offer', 'Offer'), ('approved','Approved'), 
     	('in progress', 'In progress'), ('ready', 'Ready'), ('verified', 'Verified'), ('close', 'Close')])
+
+
+def is_future_data(self, cr, uid, ids, my_date, context=None):
+	if datetime.striptime(my_date, DEFAULT_SERVER_DATE_FORMAT).date() > datetime.now().date():
+		return False
+	return my_date
 
 #    _columns = {
 #    	'name' : fields.Char(size=64),

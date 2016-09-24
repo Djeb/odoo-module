@@ -16,12 +16,11 @@
     </record>
     
     <!-- actions opening views on models -->
-    <!-- Когда окно открыто -->
+    
     <record model="ir.actions.act_window" id="lists.action_window">
-      <field name="name">List of application</field>
+      <field name="name">Lists of application</field>
       <field name="res_model">lists.application</field>
       <field name="view_mode">tree,form</field>
-      <field name=""
     </record>
     
 
