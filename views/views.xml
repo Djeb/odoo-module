@@ -1,28 +1,29 @@
 <openerp>
   <data>
     <!-- explicit list view definition -->
-    <!--
+    
     <record model="ir.ui.view" id="lists.list">
       <field name="name">Lists list</field>
-      <field name="model">lists.lists</field>
+      <field name="model">lists.application</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="create_date"/>
+          <field name="final_date"/>
+          <field name="state"/> 
         </tree>
       </field>
     </record>
-    -->
-
+    
     <!-- actions opening views on models -->
-    <!--
+    <!-- Когда окно открыто -->
     <record model="ir.actions.act_window" id="lists.action_window">
-      <field name="name">Lists window</field>
-      <field name="res_model">lists.lists</field>
+      <field name="name">List of application</field>
+      <field name="res_model">lists.application</field>
       <field name="view_mode">tree,form</field>
+      <field name=""
     </record>
-    -->
+    
 
     <!-- server action to the one above -->
     <!--
@@ -40,9 +41,8 @@
     -->
 
     <!-- Top menu item -->
-    <!--
-    <menuitem name="Lists" id="lists.menu_root"/>
-    -->
+    
+    <menuitem name="Lists" id="lists.menu_root" action="lists.action_window"/>
     <!-- menu categories -->
     <!--
     <menuitem name="Menu 1" id="lists.menu_1" parent="lists.menu_root"/>

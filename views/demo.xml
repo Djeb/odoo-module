@@ -1,0 +1,8 @@
+<openerp>
+	<data>
+		<record id="first_course_item" model="lists.application">
+    		<field name="name">Record #1</field>
+    		<field name="description">A description for record #1.</field>
+		</record>
+	</data>
+</openerp>

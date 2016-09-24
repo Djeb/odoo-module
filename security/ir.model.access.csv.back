@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_lists_lists,lists.application,model_lists_application,,1,1,1,0
+access_lists_lists, lists.lists, model_lists_lists, ,1,0,0,0
